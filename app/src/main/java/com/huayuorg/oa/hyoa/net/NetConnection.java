@@ -27,8 +27,8 @@ public class NetConnection {
                 }
                 try {
                     URLConnection uc;
-                    System.out.println("URL:" + url);
-                    System.out.println("Data" + paramBuffer.toString());
+                    System.out.println("URL: " + url);
+                    System.out.println("Data: " + paramBuffer.toString());
                     switch (method) {
                         case POST:
                             uc = new URL(url).openConnection();

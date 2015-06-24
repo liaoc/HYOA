@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_main_tab_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/bottom_bar"
+    android:layout_alignParentBottom="true">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp" >
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_mainpage"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_mainpage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:background="#0000"
+
+                android:clickable="false"
+                android:src="@drawable/tab_mainpage_pressed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_contact"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_contact"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_contact_normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯录" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_workflow"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_workflow"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_workflow_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="流程中心" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_more"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_more"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_more_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

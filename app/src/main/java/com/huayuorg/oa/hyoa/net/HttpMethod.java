@@ -6,3 +6,5 @@ package com.huayuorg.oa.hyoa.net;
 public enum HttpMethod {
     GET,POST
 }
+
+
