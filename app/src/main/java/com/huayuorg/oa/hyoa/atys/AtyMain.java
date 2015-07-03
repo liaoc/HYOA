@@ -1,5 +1,6 @@
 package com.huayuorg.oa.hyoa.atys;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -7,15 +8,13 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.huayuorg.oa.hyoa.R;
-import com.huayuorg.oa.hyoa.frg.FrgMainTab01;
-import com.huayuorg.oa.hyoa.frg.FrgMainTab02;
+import com.huayuorg.oa.hyoa.frg.FrgMainTabMainPage;
+import com.huayuorg.oa.hyoa.frg.FrgMainTabContact;
 import com.huayuorg.oa.hyoa.frg.FrgMainTab03;
-import com.huayuorg.oa.hyoa.frg.FrgMainTab04;
+import com.huayuorg.oa.hyoa.frg.FrgMainTabMore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +37,9 @@ public class AtyMain extends FragmentActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.aty_main);
+
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
         initView();
@@ -65,20 +65,16 @@ public class AtyMain extends FragmentActivity implements View.OnClickListener {
                 resetTabBtn();
                 switch (position) {
                     case 0:
-                        ((ImageButton) mTabBtnMainPage.findViewById(R.id.btn_tab_bottom_mainpage))
-                                .setImageResource(R.drawable.tab_mainpage_pressed);
+                        mTabBtnMainPage.setBackgroundColor(Color.parseColor("#377AB1"));
                         break;
                     case 1:
-                        ((ImageButton) mTabBtnContacts.findViewById(R.id.btn_tab_bottom_contact))
-                                .setImageResource(R.drawable.tab_contact_pressed);
+                        mTabBtnContacts.setBackgroundColor(Color.parseColor("#377AB1"));
                         break;
                     case 2:
-                        ((ImageButton) mTabBtnWorkFlow.findViewById(R.id.btn_tab_bottom_workflow))
-                                .setImageResource(R.drawable.tab_workflow_pressed);
+                        mTabBtnWorkFlow.setBackgroundColor(Color.parseColor("#377AB1"));
                         break;
                     case 3:
-                        ((ImageButton) mTabBtnMore.findViewById(R.id.btn_tab_bottom_more))
-                                .setImageResource(R.drawable.tab_more_pressed);
+                        mTabBtnMore.setBackgroundColor(Color.parseColor("#377AB1"));
                         break;
                 }
 
@@ -99,6 +95,7 @@ public class AtyMain extends FragmentActivity implements View.OnClickListener {
         mTabBtnContacts.setOnClickListener(this);
         mTabBtnWorkFlow.setOnClickListener(this);
         mTabBtnMore.setOnClickListener(this);
+        mTabBtnMainPage.setBackgroundColor(Color.parseColor("#377AB1"));
     }
 
     private void initView() {
@@ -107,10 +104,10 @@ public class AtyMain extends FragmentActivity implements View.OnClickListener {
         mTabBtnWorkFlow = (LinearLayout) findViewById(R.id.id_tab_bottom_workflow);
         mTabBtnMore = (LinearLayout) findViewById(R.id.id_tab_bottom_more);
 
-        FrgMainTab01 tab01 = new FrgMainTab01();
-        FrgMainTab02 tab02 = new FrgMainTab02();
+        FrgMainTabMainPage tab01 = new FrgMainTabMainPage();
+        FrgMainTabContact tab02 = new FrgMainTabContact();
         FrgMainTab03 tab03 = new FrgMainTab03();
-        FrgMainTab04 tab04 = new FrgMainTab04();
+        FrgMainTabMore tab04 = new FrgMainTabMore();
         mFragments.add(tab01);
         mFragments.add(tab02);
         mFragments.add(tab03);
@@ -118,14 +115,10 @@ public class AtyMain extends FragmentActivity implements View.OnClickListener {
     }
 
     protected void resetTabBtn() {
-        ((ImageButton) mTabBtnMainPage.findViewById(R.id.btn_tab_bottom_mainpage))
-                .setImageResource(R.drawable.tab_mainpage_normal);
-        ((ImageButton) mTabBtnContacts.findViewById(R.id.btn_tab_bottom_contact))
-                .setImageResource(R.drawable.tab_contact_normal);
-        ((ImageButton) mTabBtnWorkFlow.findViewById(R.id.btn_tab_bottom_workflow))
-                .setImageResource(R.drawable.tab_workflow_normal);
-        ((ImageButton) mTabBtnMore.findViewById(R.id.btn_tab_bottom_more))
-                .setImageResource(R.drawable.tab_more_normal);
+        mTabBtnMainPage.setBackgroundColor(Color.parseColor("#26537A"));
+        mTabBtnContacts.setBackgroundColor(Color.parseColor("#26537A"));
+        mTabBtnWorkFlow.setBackgroundColor(Color.parseColor("#26537A"));
+        mTabBtnMore.setBackgroundColor(Color.parseColor("#26537A"));
     }
 
     @Override
@@ -133,23 +126,19 @@ public class AtyMain extends FragmentActivity implements View.OnClickListener {
         resetTabBtn();
         switch (v.getId()) {
             case R.id.id_tab_bottom_mainpage:
-                ((ImageButton) mTabBtnMainPage.findViewById(R.id.btn_tab_bottom_mainpage))
-                        .setImageResource(R.drawable.tab_mainpage_pressed);
+                 mTabBtnMainPage.setBackgroundColor(Color.parseColor("#377AB1"));
                 mViewPager.setCurrentItem(0, false);
                 break;
             case R.id.id_tab_bottom_contact:
-                ((ImageButton) mTabBtnContacts.findViewById(R.id.btn_tab_bottom_contact))
-                        .setImageResource(R.drawable.tab_contact_pressed);
+                 mTabBtnContacts.setBackgroundColor(Color.parseColor("#377AB1"));
                 mViewPager.setCurrentItem(1, false);
                 break;
             case R.id.id_tab_bottom_workflow:
-                ((ImageButton) mTabBtnWorkFlow.findViewById(R.id.btn_tab_bottom_workflow))
-                        .setImageResource(R.drawable.tab_workflow_pressed);
+                mTabBtnWorkFlow.setBackgroundColor(Color.parseColor("#377AB1"));
                 mViewPager.setCurrentItem(2, false);
                 break;
             case R.id.id_tab_bottom_more:
-                ((ImageButton) mTabBtnMore.findViewById(R.id.btn_tab_bottom_more))
-                        .setImageResource(R.drawable.tab_more_pressed);
+               mTabBtnMore.setBackgroundColor(Color.parseColor("#377AB1"));
                 mViewPager.setCurrentItem(3, false);
                 break;
 

@@ -3,7 +3,6 @@ package com.huayuorg.oa.hyoa.atys;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -51,7 +50,7 @@ public class AtyLogin extends Activity {
                     Toast.makeText(getApplicationContext(), getString(R.string.account_or_password_not_enter), Toast.LENGTH_SHORT).show();
                     return;
                 } else {
-                    final ProgressDialog progressDialog = ProgressDialog.show(AtyLogin.this, getString(R.string.connection), getString(R.string.connecting_to_server));
+                    final ProgressDialog progressDialog = ProgressDialog.show(AtyLogin.this, getString(R.string.connecting), getString(R.string.connecting_to_server));
                     new Login(Config.getMac(getApplicationContext()), etAccount.getText().toString(),
                             etPassword.getText().toString(), new Login.SuccessCallback() {
                         @Override

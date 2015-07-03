@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import com.huayuorg.oa.hyoa.atys.AtyLogin;
 import com.huayuorg.oa.hyoa.atys.AtyMain;
+import com.huayuorg.oa.hyoa.atys.MainActivity;
+import com.huayuorg.oa.hyoa.atys.atyTest;
 
 
 public class BeforeLogin extends Activity{
@@ -15,6 +17,8 @@ public class BeforeLogin extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.activity_main);
+//        startActivity(new Intent(BeforeLogin.this,MainActivity.class));
+//        finish();
         String token = Config.getCacheToken(getApplicationContext());
         String account = Config.getAccount(getApplicationContext());
         if (token == "" || account == "") {

@@ -3,7 +3,7 @@
     android:id="@+id/ly_main_tab_bottom"
     android:layout_width="fill_parent"
     android:layout_height="55dp"
-    android:background="@drawable/bottom_bar"
+    android:background="#26537A"
     android:layout_alignParentBottom="true">
     <LinearLayout
         android:layout_width="fill_parent"
@@ -27,11 +27,11 @@
                 android:background="#0000"
 
                 android:clickable="false"
-                android:src="@drawable/tab_mainpage_pressed" />
+                android:src="@drawable/tab_mainpage_normal" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="首页" />
+                android:text="@string/main_page" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,7 +55,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="通讯录" />
+                android:text="@string/contact_book" />
         </LinearLayout>
 
         <LinearLayout
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="流程中心" />
+                android:text="@string/flow_center" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,7 +102,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="更多" />
+                android:text="@string/more_information" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

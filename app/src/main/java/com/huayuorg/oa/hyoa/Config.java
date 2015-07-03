@@ -22,11 +22,88 @@ public class Config {
     public static final String KEY_MAC="mac";
     public static final String KEY_STATUS="status";
 
+    //公文
+    public static final String KEY_OFFICIAL="official";
+    public static final String KEY_OFFICIAL_BILLNUM ="billnum" ;
+    public static final String KEY_OFFICIAL_TITLE ="title" ;
+    public static final String KEY_OFFICIAL_TIME ="time" ;
+    public static final String KEY_OFFICIAL_LINK ="link" ;
+
+
+    public static final String KEY_CONTACT ="contact" ;
+    public static final String KEY_CONTACT_NUMID="numid";
+    public static final String KEY_CONTACT_ACCOUNT="account";
+    public static final String KEY_CONTACT_NUMNAME="numname";
+    public static final String KEY_CONTACT_SEX="sex";
+    public static final String KEY_CONTACT_MOBILE="mobile";
+    public static final String KEY_CONTACT_SHOWNAME="showname";
+    public static final String KEY_CONTACT_CORPID="corpid";
+    public static final String KEY_CONTACT_ORGID="orgid";
+    public static final String KEY_CONTACT_POSTID="postid";
+    public static final String KEY_CONTACT_NUMSTATE="numstate";
+    public static final String KEY_CONTACT_CORPORDER="corporder";
+    public static final String KEY_CONTACT_ORGANORDER="organorder";
+    public static final String KEY_CONTACT_POSTORDER="postorder";
+    public static final String KEY_CONTACT_BIRTHDAY="birthday";
+    public static final String KEY_CONTACT_PHOTOS="photos";
+    public static final String KEY_CONTACT_GROUPCORNET="groupcornet";
+    public static final String KEY_CONTACT_OFFICETEL="officetel";
+    public static final String KEY_CONTACT_ISMAINPOST="ismainpost";
+    public static final String KEY_CONTACT_ENTRYDATE="entrydate";
+    public static final String KEY_CONTACT_ISADMIN="isadmin";
+    public static final String KEY_CONTACT_IDNUMER="idnumber";
+    public static final String KEY_CONTACT_EMAIL="email";
+    public static final String KEY_CONTACT_CORPNAME="corpname";
+    public static final String KEY_CONTACT_ORGNAME="orgname";
+    public static final String KEY_CONTACT_POSTNAME="postname";
+
+    public static final String DB_DATABASE_NAME="OA.db";
+    public static final int DB_DATABASE_VERSION=1;
+    public static final String DB_CONTACT_TABLE_NAME="tb_contact";
+    public static final String DB_CONTACT_COLUMN_NUMID="numid";
+    public static final String DB_CONTACT_COLUMN_ACCOUNT="account";
+    public static final String DB_CONTACT_COLUMN_NUMNAME="numname";
+    public static final String DB_CONTACT_COLUMN_SEX="sex";
+    public static final String DB_CONTACT_COLUMN_MOBILE="mobile";
+    public static final String DB_CONTACT_COLUMN_SHOWNAME="showname";
+    public static final String DB_CONTACT_COLUMN_CORPID="corpid";
+    public static final String DB_CONTACT_COLUMN_ORGID="orgid";
+    public static final String DB_CONTACT_COLUMN_POSTID="postid";
+    public static final String DB_CONTACT_COLUMN_NUMSTATE="numstate";
+    public static final String DB_CONTACT_COLUMN_CORPORDER="corporder";
+    public static final String DB_CONTACT_COLUMN_ORGANORDER="organorder";
+    public static final String DB_CONTACT_COLUMN_POSTORDER="postorder";
+    public static final String DB_CONTACT_COLUMN_BIRTHDAY="birthday";
+    public static final String DB_CONTACT_COLUMN_PHOTOS="photos";
+    public static final String DB_CONTACT_COLUMN_GROUPCORNET="groupcornet";
+    public static final String DB_CONTACT_COLUMN_OFFICETEL="officetel";
+    public static final String DB_CONTACT_COLUMN_ISMAINPOST="ismainpost";
+    public static final String DB_CONTACT_COLUMN_ENTRYDATE="entrydate";
+    public static final String DB_CONTACT_COLUMN_ISADMIN="isadmin";
+    public static final String DB_CONTACT_COLUMN_IDNUMER="idnumber";
+    public static final String DB_CONTACT_COLUMN_EMAIL="email";
+    public static final String DB_CONTACT_COLUMN_CORPNAME="corpname";
+    public static final String DB_CONTACT_COLUMN_ORGNAME="orgname";
+    public static final String DB_CONTACT_COLUMN_POSTNAME="postname";
+    
+    public static final String DB_OFFICIAL_TABLE_NAME="tb_official";
+    public static final String DB_OFFICIAL_COLUMN_TITLE="title";
+    public static final String DB_OFFICIAL_COLUMN_BILLNUM="billnum";
+    public static final String DB_OFFICIAL_COLUMN_LINK="link";
+    public static final String DB_OFFICIAL_COLUMN_TIME="time";
+
+
+
     public static final int RESULT_STATUS_SUCCESS=1;
     public static final int RESULT_STATUS_FAIL=0;
     public static final int RESULT_STATUS_INVALID_TOKEN=2;
 
     public static final String ACTION_LOGIN="login";
+    public static final String ACTION_LOAD_NOTICE ="notice" ;
+    public static final String ACTION_LOAD_T0_BE_AUDIT ="audit" ;
+    public static final String ACTION_LOAD_TO_BE_READ ="read" ;
+    public static final String ACTION_LOAD_CONTACT ="contact" ;
+
 
 
     public static String getCacheToken(Context context) {
@@ -43,9 +120,9 @@ public class Config {
         return context.getSharedPreferences(APP_ID, Context.MODE_PRIVATE).getString(KEY_ACCOUNT, "");
     }
 
-    public static void cacheAccount(Context context, String token) {
+    public static void cacheAccount(Context context, String account) {
         SharedPreferences.Editor editor = context.getSharedPreferences(APP_ID, Context.MODE_PRIVATE).edit();
-        editor.putString(KEY_ACCOUNT, token);
+        editor.putString(KEY_ACCOUNT, account);
         editor.commit();
     }
 
