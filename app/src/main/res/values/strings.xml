@@ -43,4 +43,9 @@
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
+    <string name="title_activity_aty__main_tabs__mainpage">Aty_MainTabs_Mainpage</string>
+    <string name="title_activity_aty__main_tabs__contact">Aty_MainTabs_Contact</string>
+    <string name="title_activity_aty__main_tabs__work_flow">Aty_MainTabs_WorkFlow</string>
+    <string name="title_activity_aty__main_tabs__more">Aty_MainTabs_More</string>
+    <string name="title_activity_aty__main">Aty_Main</string>
 </resources>

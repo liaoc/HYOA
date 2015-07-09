@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.huayuorg.oa.hyoa.Config;
 import com.huayuorg.oa.hyoa.R;
-import com.huayuorg.oa.hyoa.adapter.FrgMainTab01ListAdapter;
+import com.huayuorg.oa.hyoa.adapter.NoticeAdapter;
 import com.huayuorg.oa.hyoa.atys.AtyLogin;
 import com.huayuorg.oa.hyoa.net.MainTabMainPage_Notice;
 import com.huayuorg.oa.hyoa.entities.Official;
@@ -33,7 +33,7 @@ public class FrgMainTabMainPage extends android.support.v4.app.ListFragment impl
     private int current_index = 0;
     private FragmentPagerAdapter mAdapter;
     private List<Fragment> mFragments = new ArrayList<Fragment>();
-    private FrgMainTab01ListAdapter adapter;
+    private NoticeAdapter adapter;
 
     @Nullable
     @Override
@@ -76,7 +76,7 @@ public class FrgMainTabMainPage extends android.support.v4.app.ListFragment impl
         });
 
         //����֪ͨ
-        adapter = new FrgMainTab01ListAdapter(getActivity());
+        adapter = new NoticeAdapter(getActivity());
         setListAdapter(adapter);
         final ProgressDialog pd = ProgressDialog.show(getActivity(), getResources().getString(R.string.connecting), getResources().getString(R.string.connecting_to_server));
         new MainTabMainPage_Notice(Config.getAccount(getActivity()), Config.getCacheToken(getActivity()), new MainTabMainPage_Notice.SuccessCallback() {

@@ -38,7 +38,6 @@ public class atyTest extends Activity {
                 refreshableView.finishRefreshing();
             }
         }, 0);
-
     }
 
     @Override

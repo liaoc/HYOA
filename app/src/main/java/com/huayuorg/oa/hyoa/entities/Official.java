@@ -8,12 +8,18 @@ import java.util.Date;
 public class Official {
     private String billnum = null, title = null, link = null;
     private Date time = new Date();
+    private String type,numid;
 
-    public Official(String billnum, String title, Date time, String link) {
+
+
+
+    public Official(String billnum, String title, String link, Date time, String type, String numid) {
         this.billnum = billnum;
         this.title = title;
-        this.time = time;
         this.link = link;
+        this.time = time;
+        this.type = type;
+        this.numid = numid;
     }
 
     public String getBillnum() {
@@ -30,5 +36,13 @@ public class Official {
 
     public Date getTime() {
         return time;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getNumid() {
+        return numid;
     }
 }

@@ -40,8 +40,11 @@ public class MainTabMainPage_Audit {
                                         e.printStackTrace();
                                     }
                                     data.add(new Official(object.getString(Config.KEY_OFFICIAL_BILLNUM),
-                                            object.getString(Config.KEY_OFFICIAL_TITLE),date,
-                                            object.getString(Config.KEY_OFFICIAL_LINK)));
+                                            object.getString(Config.KEY_OFFICIAL_TITLE),
+                                            object.getString(Config.KEY_OFFICIAL_LINK),
+                                            date,
+                                            object.getString(Config.KEY_OFFICIAL_TYPE),
+                                            object.getString(Config.KEY_OFFICIAL_NUMID)));
                                 }
                                 successCallback.onSuccess(data);
                             }

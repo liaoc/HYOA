@@ -54,11 +54,12 @@ public class AtyLogin extends Activity {
                     new Login(Config.getMac(getApplicationContext()), etAccount.getText().toString(),
                             etPassword.getText().toString(), new Login.SuccessCallback() {
                         @Override
-                        public void onSuccess(String token) {
+                        public void onSuccess(String token,String numid) {
                             progressDialog.dismiss();
                             Config.cacheToken(getApplicationContext(), token);
                             Config.cacheAccount(AtyLogin.this, etAccount.getText().toString());
-                            Intent i = new Intent(getApplicationContext(), AtyMain.class);
+                            Config.cacheNumid(AtyLogin.this,numid);
+                            Intent i = new Intent(getApplicationContext(),Aty_Main.class);
                             i.putExtra(Config.KEY_TOKEN, token);
                             i.putExtra(Config.KEY_ACCOUNT, etAccount.getText().toString());
 

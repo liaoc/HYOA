@@ -22,7 +22,7 @@
             android:label="@string/title_activity_aty__login" >
         </activity>
         <activity
-            android:name=".atys.AtyMain"
+            android:name=".atys.AtyMainBefore"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
@@ -30,8 +30,26 @@
             android:label="@string/title_activity_aty_test" >
         </activity>
         <activity
-            android:name=".atys.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:name=".atys.Aty_MainTabs_Mainpage"
+            android:theme="@style/Base.Theme.AppCompat.Light"
+            android:label="@string/title_activity_aty__main_tabs__mainpage" >
+        </activity>
+        <activity
+            android:name=".atys.Aty_MainTabs_Contact"
+            android:label="@string/title_activity_aty__main_tabs__contact" >
+        </activity>
+        <activity
+            android:name=".atys.Aty_MainTabs_WorkFlow"
+            android:label="@string/title_activity_aty__main_tabs__work_flow" >
+        </activity>
+        <activity
+            android:name=".atys.Aty_MainTabs_More"
+            android:label="@string/title_activity_aty__main_tabs__more" >
+        </activity>
+        <activity
+            android:name=".atys.Aty_Main"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="@string/title_activity_aty__main" >
         </activity>
     </application>
 

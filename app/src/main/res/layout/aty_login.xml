@@ -43,6 +43,7 @@
                 android:layout_weight="8"
                 android:background="@drawable/shape_corner_editbox"
                 android:hint="@string/accountHint"
+                android:text="liaoc"
                 android:textColor="#AAAAAA"
                 android:textColorHint="#AAAAAA" />
 
@@ -67,6 +68,7 @@
                 android:layout_weight="8"
                 android:background="@drawable/shape_corner_editbox"
                 android:hint="@string/passwordHint"
+                android:text="000000"
                 android:inputType="textPassword"
                 android:textColor="#AAAAAA"
                 android:textColorHint="#AAAAAA" />

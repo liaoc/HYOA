@@ -6,9 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.huayuorg.oa.hyoa.atys.AtyLogin;
-import com.huayuorg.oa.hyoa.atys.AtyMain;
-import com.huayuorg.oa.hyoa.atys.MainActivity;
-import com.huayuorg.oa.hyoa.atys.atyTest;
+
+import com.huayuorg.oa.hyoa.atys.Aty_Main;
 
 
 public class BeforeLogin extends Activity{
@@ -25,7 +24,7 @@ public class BeforeLogin extends Activity{
             startActivity(new Intent(BeforeLogin.this, AtyLogin.class));
 
         } else {
-            startActivity(new Intent(BeforeLogin.this, AtyMain.class));
+            startActivity(new Intent(BeforeLogin.this, Aty_Main.class));
         }
         finish();
     }

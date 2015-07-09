@@ -42,8 +42,10 @@ public class MainTabMainPage_Notice {
                                     }
                                     data.add(new Official(dataObj.getString(Config.KEY_OFFICIAL_BILLNUM),
                                             dataObj.getString(Config.KEY_OFFICIAL_TITLE),
-                                            date,
-                                            dataObj.getString(Config.KEY_OFFICIAL_LINK)));
+                                            dataObj.getString(Config.KEY_OFFICIAL_LINK), date,
+
+                                            dataObj.getString(Config.KEY_OFFICIAL_TYPE),
+                                            dataObj.getString(Config.KEY_OFFICIAL_NUMID)));
                                 }
                                 successCallback.onSuccess(data);
                             }
